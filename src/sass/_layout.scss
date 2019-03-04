@@ -1,0 +1,342 @@
+/////////////////////////////
+/////// Container
+
+.container {
+    font-size: 1.6rem;
+    position: relative;
+    padding: 3rem 4rem;
+}
+
+@media only screen and (max-width: "1000px") {
+    .container {
+        padding: 0 0;
+    }
+}
+
+.section {
+    margin: 7rem 0;
+    padding: 7rem 4rem;
+}
+
+/////////////////////////////
+/////// Header
+
+.header {
+    font-size: 1.4rem;
+    font-family: 'Chalkduster';
+    color: var(--color-grey-light-1);
+    height: calc(100vh - 3rem);
+    padding-top: 20vh;
+    position: relative;
+    background-color: var(--color-grey-dark);
+}
+
+@media only screen and (max-width: "1000px") {
+    .header {
+        height:  100vh;
+    }
+}
+
+@media only screen and (max-width: "900px") {
+    .header {
+        padding: 20vh 4rem 0;
+
+    }
+}
+
+@media only screen and (max-height: "600px") {
+    .header {
+        padding-top: 10vh;
+    }
+}
+
+/////////////////////////////
+/////// Presentation
+
+.presentation {
+  
+    background-color: var(--color-primary);
+    color: var(--color-grey-light-1);
+}
+
+/////////////////////////////
+/////// Summary Statement
+
+.summary-statement {
+    
+    &__content {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        p {
+            width: 72%;
+            text-align: left;
+            height: auto;
+            margin-left: 3rem;
+        }
+    }
+
+}
+
+@media only screen and (max-width: "800px") {
+
+    .summary-statement {
+
+        &__content {
+            position: relative;
+            display: block;
+    
+            img {
+                width: 100%;
+                height: auto;
+                padding-bottom: 2rem;
+            }
+    
+            p {
+                width: 100%;
+                text-align: center;
+                height: auto;
+                margin-left: 0;
+            }
+        }
+    
+    }
+}
+
+/////////////////////////////
+/////// Skills
+
+.skills {
+    background-color: var(--color-primary);
+    color: var(--color-grey-light-1);
+
+
+    &__body {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+}
+
+/////////////////////////////
+/////// Portfolio
+
+.portfolio {
+    h2 {
+
+        width: 60%;
+        margin-top: -12rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 2rem;
+        background-color: var(--color-grey-light-1);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .project {
+            width: 48%;
+            margin-bottom: 3rem;
+            border-radius: 40px;
+
+            img {
+                width: 100%;
+                border-radius: 40px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: "800px") {
+    .portfolio__content {
+        flex-direction: column;
+        align-items: center;
+
+        .project {
+            width: 90%;
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+            img {
+                width: 100%;
+
+                
+            }
+        }
+    }
+   
+}
+
+/////////////////////////////
+/////// Contact
+
+.contact {
+    h2 {
+        margin-bottom: 7rem;
+    }
+}
+
+/////////////////////////////
+/////// Footer
+
+.footer {
+    background-color: var(--color-grey-dark);
+    color: var(--color-grey-light-1);
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+
+    .social {
+        margin-bottom: 8vw;
+        
+        a {
+            text-decoration: none;
+        }
+
+        svg {
+            width: 5rem;
+            height: 5rem;
+            fill: var(--color-grey-light-1);
+
+            
+
+            
+        }
+        a:not(:last-child) {
+            margin-right: 4rem;
+        }
+    }
+
+    ul {
+        margin-bottom: 8vw;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+
+        
+        }
+        
+        li {
+            font-size: 2rem;
+            display: inline-block;
+            margin-right: 2rem;
+            position: relative;
+
+            &:after,
+            &:before {
+                content: "";
+                height: 2px;
+                width: 0;
+                position: absolute;
+                bottom: -5px;
+                background-color: var(--color-grey-light-1);
+                transition: all .4s ease;
+            }
+            &:after {
+                right: 50%;
+            }
+            &:before {
+                left: 50%;
+            }
+
+            &:hover {
+
+                &:after,
+                &:before {
+                    width: 50%;
+                }
+            }
+            
+            a {
+                transition: all 1s ease;
+                text-decoration: none;
+                color: var(--color-grey-light-1);
+            }
+        }
+        @media only screen and (max-width: "800px") {
+            ul {
+                flex-direction: column;
+                li {
+                    margin-right: 0;
+                    margin: auto;
+                }
+                li:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    .legal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            display: inline-block;
+            margin: 0 2rem;
+            width: 4rem;
+            height: 4.5rem;
+        }
+
+        
+    }
+
+
+/////////////////////////////
+/////// Form
+   
+
+.all {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(49, 49, 49, .7);
+    z-index: 9000;
+    color: var(--color-grey-light-1);
+    display: none;
+
+    .items {
+        width: 70vw;
+        margin: 5vh auto;
+        background-color: var(--color-primary);
+        padding: 5rem;
+        position: relative;
+    }
+}
+
+
+@media only screen and (max-width: "900px") {
+    .all {
+    
+        .items {
+            width: 90vw;
+            min-height: 90vh;
+            padding: 5rem 0;
+        }
+    }
+}
+
+
+@media only screen and (max-width: "600px") {
+    .all {
+    
+        .items {
+            padding: 5rem 0;
+            width: 100vw;
+            min-height: 100vh;
+        margin: 0;
+        }
+    }
+}
+
