@@ -31,6 +31,8 @@ jobs:
           name: Deploy Over SSH
           command: |
             cp ~/project/.circleci/known_hosts ~/.ssh/
+            git config --global user.email "oldbroth3rz@gmail.com"
+            git config --global user.name "Oldbroth3rz"
             git add .
             git commit -m 'Add dist folder'
             git status
