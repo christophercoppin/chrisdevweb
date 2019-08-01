@@ -31,6 +31,8 @@ jobs:
           name: Deploy Over SSH
           command: |
             cp ~/project/.circleci/known_hosts ~/.ssh/
+            git add .
+            git commit -m 'Add dist folder'
             git status
             git remote add production ssh://${USER_NAME}@${HOSTNAME}/var/repo/chrisdev.git
             git push production master
